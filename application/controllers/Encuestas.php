@@ -20,7 +20,7 @@ class Encuestas extends CI_Controller {
         
         $data['title'] = "Iniciar sesión";
         
-        
+        $dato = "git";
         
         
     }
