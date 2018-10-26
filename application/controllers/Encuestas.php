@@ -13,17 +13,31 @@
  */
 class Encuestas extends CI_Controller {
     
+   
+    
     public function index(){
         //carga la vista de los diseños 
+        
+        $data['title'] = "Iniciar sesión";
+        
+        
+        
+        
     }
     
     
     public function agregarEncuesta(){
         
+        
+        
     }
     
    
     public function agregarRespuesta(){
+        
+        
+        
+        
         
     }
    
