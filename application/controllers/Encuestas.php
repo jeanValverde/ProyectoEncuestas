@@ -20,6 +20,8 @@ class Encuestas extends CI_Controller {
     
     public function agregarEncuesta(){
         
+        $data['title'] = "Encuestas";
+        
     }
     
    
