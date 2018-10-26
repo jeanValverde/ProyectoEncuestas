@@ -23,7 +23,14 @@ class Encuestas extends CI_Controller {
         $dato = "git";
         
         if($data == "git"){
-            //cualquier cosa 
+            //para guardar en git tienes despues de programas tienes que 
+            //ir a la carpera del proyecto en la CMD y colocar los siguientes 
+            //comandos 
+            //git add -A
+            //git commit -m "mensaje de la actualizacion" 
+            //git push 
+            //git pull
+            //git status 
         }
         
         
