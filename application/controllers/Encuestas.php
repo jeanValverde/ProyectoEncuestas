@@ -22,6 +22,10 @@ class Encuestas extends CI_Controller {
         
         $dato = "git";
         
+        if($data == "git"){
+            //cualquier cosa 
+        }
+        
         
     }
     
