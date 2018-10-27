@@ -29,6 +29,8 @@ class Encuestas extends CI_Controller {
 
         $otraRespuesta = "";
         
+
+        $PruebaSiSeborra = "virtualPc";
         
         
         $miraOtra = "";
