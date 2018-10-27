@@ -22,6 +22,8 @@ class Encuestas extends CI_Controller {
         
         $data['title'] = "Encuestas";
 
+        $ultimo = "";
+
 
       
         
