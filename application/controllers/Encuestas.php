@@ -36,6 +36,9 @@ class Encuestas extends CI_Controller {
         $esteEsConUnoReal = "pcOrigin";
         
         $miraOtra = "";
+
+
+        $ultimaPrueba = "";
         
         
         $acaTengoLaUltima = "dsd";
