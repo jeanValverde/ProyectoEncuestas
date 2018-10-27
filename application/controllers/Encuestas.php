@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,6 +21,9 @@ class Encuestas extends CI_Controller {
     public function agregarEncuesta(){
         
         $data['title'] = "Encuestas";
+
+
+        $pruebaConOtro = "aca";
         
     }
     
