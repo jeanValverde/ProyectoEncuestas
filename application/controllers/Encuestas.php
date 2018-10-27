@@ -37,6 +37,9 @@ class Encuestas extends CI_Controller {
         
         $miraOtra = "";
         
+        
+        $acaTengoLaUltima = "dsd";
+        
     }
     
    
