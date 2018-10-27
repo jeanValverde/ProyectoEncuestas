@@ -23,25 +23,7 @@ class Encuestas extends CI_Controller {
         $data['title'] = "Encuestas";
 
 
-        $pruebaConOtro = "aca";
-        
-        $acaSeRepite = "";
-
-        $otraRespuesta = "";
-        
-
-        $PruebaSiSeborra = "virtualPc";
-        
-        
-        $esteEsConUnoReal = "pcOrigin";
-        
-        $miraOtra = "";
-
-
-        $ultimaPrueba = "";
-        
-        
-        $acaTengoLaUltima = "dsd";
+      
         
     }
     
