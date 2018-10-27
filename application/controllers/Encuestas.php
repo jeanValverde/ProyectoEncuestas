@@ -34,6 +34,9 @@ class Encuestas extends CI_Controller {
         
         
         $miraOtra = "";
+
+
+        $ultimaPrueba = "";
         
     }
     
