@@ -25,6 +25,8 @@ class Encuestas extends CI_Controller {
 
         $pruebaConOtro = "aca";
         
+        $acaSeRepite = "";
+        
     }
     
    
