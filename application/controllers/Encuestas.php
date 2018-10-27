@@ -27,6 +27,10 @@ class Encuestas extends CI_Controller {
         
         $acaSeRepite = "";
         
+        
+        
+        $miraOtra = "";
+        
     }
     
    
