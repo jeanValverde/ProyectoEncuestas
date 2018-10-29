@@ -31,7 +31,9 @@ class Encuestas extends CI_Controller {
     
    
     public function agregarRespuesta(){
-        
+        $data['title'] = "Encuestas";
+
+        $ultimo = "";
     }
    
 }
