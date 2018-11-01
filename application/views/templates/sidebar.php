@@ -2,13 +2,8 @@
     <!--
       Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
-    <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-            CT
-        </a>
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-            Creative Tim
-        </a>
+    <div class="logo" align=center>
+        <img src="<?= base_url(); ?>public/img/logo_enc.png" style="max-width:100%;width:auto;height:auto;">
     </div>
     <div class="sidebar-wrapper">
         <ul class="nav">

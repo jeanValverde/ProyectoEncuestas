@@ -10,7 +10,8 @@
         </div>
         <div class="card card-nav-tabs text-center" style="width: 20rem;">
             <div class="card-header card-header-primary">
-                <a href="encuesta.php"><img class="card-img-top-center" src="<?=base_url();?>public/img/add_1.png" alt="Card image cap" style="width:60px; height:60px; "></a>
+                <a href="<?= base_url('encuestas/agregarEncuesta') ?>">
+                    <img class="card-img-top-center" src="<?= base_url(); ?>public/img/add_1.png" alt="Card image cap" style="width:60px; height:60px; "></a>
             </div>
             <div class="card-body">
 
@@ -22,7 +23,7 @@
         </div>
         <div class="card card-nav-tabs text-center" style="width: 20rem;">
             <div class="card-header card-header-primary">
-                <a href="encuesta.php"><img class="card-img-top-center" src="<?=base_url();?>public/img/add_1.png" alt="Card image cap" style="width:60px; height:60px; "></a>
+                <a href="encuesta.php"><img class="card-img-top-center" src="<?= base_url(); ?>public/img/add_1.png" alt="Card image cap" style="width:60px; height:60px; "></a>
             </div>
             <div class="card-body">
             </div>
@@ -32,7 +33,7 @@
         </div>
         <div class="card card-nav-tabs text-center" style="width: 20rem;">
             <div class="card-header card-header-primary">
-                <a href="encuesta.php"><img class="card-img-top-center" src="<?=base_url();?>public/img/add_1.png" alt="Card image cap" style="width:60px; height:60px; "></a>
+                <a href="encuesta.php"><img class="card-img-top-center" src="<?= base_url(); ?>public/img/add_1.png" alt="Card image cap" style="width:60px; height:60px; "></a>
             </div>
             <div class="card-body">
 
@@ -44,7 +45,7 @@
         </div>
         <div class="card card-nav-tabs text-center" style="width: 20rem;">
             <div class="card-header card-header-primary">
-                <a href="encuesta.php"><img href="encuesta.php" class="card-img-top-center" src="<?=base_url();?>public/img/add_1.png" alt="Card image cap" style="width:60px; height:60px; "></a>
+                <a href="encuesta.php"><img href="encuesta.php" class="card-img-top-center" src="<?= base_url(); ?>public/img/add_1.png" alt="Card image cap" style="width:60px; height:60px; "></a>
             </div>
             <div class="card-body">
 
