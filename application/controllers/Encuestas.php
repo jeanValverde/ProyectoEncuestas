@@ -20,7 +20,7 @@ class Encuestas extends CI_Controller {
         //carga la vista de los diseños 
         $data['title'] = "Home";
         
-        $this->load->view('templates/head.php');
+        $this->load->view('templates/head.php', $data);
         $this->load->view('templates/sidebar.php');
         $this->load->view('templates/navbar.php');
         $this->load->view('encuestas/index');
