@@ -19,5 +19,8 @@
         <!-- CSS Just for demo purpose, don't include it in your project -->
         <link href="<?= base_url(); ?>public/demo/demo.css" rel="stylesheet" />
     </head>
+    
     <body class="">
-        <div class="wrapper ">
+
+        <div class="wrapper" >
+

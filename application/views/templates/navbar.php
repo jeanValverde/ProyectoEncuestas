@@ -1,6 +1,7 @@
+
+
 <div class="main-panel">
     <!-- Navbar -->
-    
     
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent  bg-primary  navbar-absolute">
         <div class="container-fluid">
@@ -48,4 +49,12 @@
             </div>
         </div>
     </nav>
+    
+     <div class="panel-header panel-header-sm">
+      </div>
+
+      
+      <div class="content">
+    
+    
     

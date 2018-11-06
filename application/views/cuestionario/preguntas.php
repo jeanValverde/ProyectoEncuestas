@@ -67,7 +67,7 @@
                 <hr>
             </div>
             <button class="btn btn-primary btn-round" type="submit">
-                <i class="now-ui-icons arrows-1_share-66"></i> Guardar
+                <i class="now-ui-icons arrows-1_share-66"></i> Guardar  
             </button>
             <?php echo form_close(); ?>
         </div>
