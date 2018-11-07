@@ -3,13 +3,28 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/config.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/cuestionario/preguntas.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/templates/footer.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/.htaccess</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/templates/head.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/constants.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/mimes.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/models/index.html</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/templates/navbar.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/controllers/Welcome.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/database.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/smileys.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/profiler.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/user_agents.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/system/helpers/array_helper.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/controllers/Encuestas.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/cuestionario/encabezado.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/routes.php</file>
-            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/models/index.html</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/encuestas/index.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/config/autoload.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/templates/sidebar.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/cuestionario/respuestas.php</file>
         </group>
     </open-files>
 </project-private>
