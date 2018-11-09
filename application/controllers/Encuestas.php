@@ -36,15 +36,13 @@ class Encuestas extends CI_Controller {
     //View encabezado
     //carga la vita del formulario 
     public function agregarEncuesta() {
-
         
-
         $data['title'] = "Encuestas";
 
-        $this->load->view('templates/head.php');
+        $this->load->view('templates/head.php', $data);
         $this->load->view('templates/sidebar.php');
         $this->load->view('templates/navbar.php');
-        $this->load->view('cuestionario/encabezado.php', $data);
+        $this->load->view('cuestionario/encabezado.php');
         $this->load->view('templates/footer.php');
     }
 
@@ -68,7 +66,8 @@ class Encuestas extends CI_Controller {
 
         $idInsertado = $this->encuesta_model->agregar_encuesta($encuesta);
         
-        $data['encuesta'] = $this->encuesta_model->get_encuesta($idInsertado); //debolver los datos recien insertados 
+        $data['encuestas'] = $this->encuesta_model->get_encuesta($idInsertado); //debolver los datos recien insertados 
+        
         
         $this->session->encuesta = $idInsertado; //mantenemos el id de la encuesta siempre en la app 
                 
@@ -76,7 +75,7 @@ class Encuestas extends CI_Controller {
         $this->load->view('templates/head.php', $data);
         $this->load->view('templates/sidebar.php');
         $this->load->view('templates/navbar.php');
-        $this->load->view('cuestionario/encabezado.php'); //ESTE NO DEBE IR YA QUE SE MUESTRA SOLO LA VISTA no el formulario!!!!! 
+        $this->load->view('cuestionario/viewEncabezado.php', $data); //ESTE NO DEBE IR YA QUE SE MUESTRA SOLO LA VISTA no el formulario!!!!! 
         $this->load->view('templates/footer.php');
     }
 

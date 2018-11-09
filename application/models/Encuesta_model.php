@@ -20,7 +20,7 @@ class Encuesta_model extends CI_Model {
         
     }
     
-    public function get_encuesta($id = -1) {
+    public function get_encuesta($id) {
 
         $this->db->select(" id_encuesta , fecha_creacion, fecha_termino, valor_base, nombre, estado, descripcion  ", FALSE);
         $this->db->from("encuesta e");
