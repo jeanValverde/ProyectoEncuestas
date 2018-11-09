@@ -17,6 +17,7 @@ class Encuesta_model extends CI_Model {
         
     function __construct() {
         $this->load->database();
+        
     }
     
     public function get_encuesta($id = -1) {
@@ -33,6 +34,7 @@ class Encuesta_model extends CI_Model {
     
     public function agregar_encuesta($encuesta) {
         $this->db->insert('encuesta', $encuesta);
+        return $this->db->insert_id();
     }
     
       public function modificar_encuesta($id, $encuesta) {

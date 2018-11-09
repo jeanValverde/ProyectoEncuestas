@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">
             <!-- deje los datos del libro a modo de ejemplo -->
-            <?= form_open('Encuestas/agregarEncuesta', array('onsubmit' => 'return validarIngresar(this)')); ?>
+            <?= form_open('Encuestas/crearEncuesta', array('onsubmit' => 'return validarIngresar(this)')); ?>
             <div class="row">
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
@@ -28,7 +28,7 @@
                 <div class="col-md-4 pl-1">
                     <div class="form-group">
                         <?= form_label('Fecha de término', 'fecha_termino') ?>
-                        <?= form_input(array('name' => 'fechaTermino', 'type' => 'date', 'class' => 'form-control', 'id' => 'fechaTermino', 'aria-dscribedby' => 'nombre', 'placeholder' => 'Ingrese fecha de termino')) ?>
+                        <?= form_input(array('name' => 'fecha_termino', 'type' => 'date', 'class' => 'form-control', 'id' => 'fechaTermino', 'aria-dscribedby' => 'nombre', 'placeholder' => 'Ingrese fecha de termino')) ?>
                         <small id="emailHelp" class="form-text text-muted">Ingrese una fecha de termino</small>
                         <div id="errorFechaTermino" class="all-width" ></div>
 
@@ -37,7 +37,7 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <?= form_label('Valor base', 'valor_base') ?>
-                        <?= form_input(array('name' => 'valorBase', 'type' => 'number', 'class' => 'form-control', 'id' => 'valorBase', 'aria-dscribedby' => 'nombre', 'placeholder' => 'Ingrese un valor')) ?>
+                        <?= form_input(array('name' => 'valor_base', 'type' => 'number', 'class' => 'form-control', 'id' => 'valorBase', 'aria-dscribedby' => 'nombre', 'placeholder' => 'Ingrese un valor')) ?>
                         <small id="emailHelp" class="form-text text-muted">Ingrese valor</small>
                         <div id="errorValorBase" class="all-width" ></div>
 
