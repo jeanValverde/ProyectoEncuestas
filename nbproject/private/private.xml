@@ -7,6 +7,10 @@
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/controllers/Encuestas.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/models/Encuesta_model.php</file>
             <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/cuestionario/encabezado.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/cuestionario/viewEncabezado.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/encuestas/index.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/templates/sidebar.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoEncuestas/application/views/templates/navbar.php</file>
         </group>
     </open-files>
 </project-private>
