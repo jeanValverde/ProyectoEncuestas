@@ -18,7 +18,7 @@ class Pregunta_model extends CI_Model {
         $this->load->database();
     }
     
-    public function get_pregunta_por_encuestas($idEncuesta = -1) {
+    public function get_preguntas_por_encuesta($idEncuesta) {
 
         $this->db->select(" id_cuestionario , pregunta , descripcion, tipo, id_encuesta  ", FALSE);
         $this->db->from("pregunta p");
@@ -34,6 +34,7 @@ class Pregunta_model extends CI_Model {
     
     public function agregar_pregunta($pregunta) {
         $this->db->insert('pregunta', $pregunta);
+        return $this->db->insert_id();
     }
     
     public function modificar_pregunta($id, $pregunta) {

@@ -16,15 +16,17 @@ class Encuestas extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('encuesta_model');
+        $this->load->model('pregunta_model');
+        $this->load->model('respuesta_model');
     }
 
     public function index() {
         //carga la vista de los diseños 
         $data['title'] = "Home";
 
-        $this->session->encuesta = -1;
-        
-        
+        $this->session->encuesta = null;
+
+
         $this->load->view('templates/head.php', $data);
         $this->load->view('templates/sidebar.php');
         $this->load->view('templates/navbar.php');
@@ -36,8 +38,10 @@ class Encuestas extends CI_Controller {
     //View encabezado
     //carga la vita del formulario 
     public function agregarEncuesta() {
-        
+
         $data['title'] = "Encuestas";
+
+        $this->session->encuesta = null;
 
         $this->load->view('templates/head.php', $data);
         $this->load->view('templates/sidebar.php');
@@ -49,14 +53,14 @@ class Encuestas extends CI_Controller {
     //agrega una encuesta nueva a la base de datos 
     //depacha la viata con la inforamcion de la encuesta mas el formulario de pregunta
     public function crearEncuesta() {
-        
+
         $data['title'] = "Encuestas";
 
         //fecha Hoy 
         $hoy = date("j, n, Y"); //arreglar fecha 
-        
+
         $encuesta = array(
-            'fecha_creacion' => $hoy ,
+            'fecha_creacion' => $hoy,
             'fecha_termino' => $this->input->post('fecha_termino'),
             'valor_base' => $this->input->post('valor_base'),
             'nombre' => $this->input->post('nombre'),
@@ -65,17 +69,17 @@ class Encuestas extends CI_Controller {
         );
 
         $idInsertado = $this->encuesta_model->agregar_encuesta($encuesta);
-        
+
         $data['encuestas'] = $this->encuesta_model->get_encuesta($idInsertado); //debolver los datos recien insertados 
-        
-        
+
         $this->session->encuesta = $idInsertado; //mantenemos el id de la encuesta siempre en la app 
-                
-        
+
+
         $this->load->view('templates/head.php', $data);
         $this->load->view('templates/sidebar.php');
         $this->load->view('templates/navbar.php');
-        $this->load->view('cuestionario/viewEncabezado.php', $data); //ESTE NO DEBE IR YA QUE SE MUESTRA SOLO LA VISTA no el formulario!!!!! 
+        $this->load->view('cuestionario/viewEncabezado.php', $data);
+        $this->load->view('cuestionario/preguntas.php', $data);
         $this->load->view('templates/footer.php');
     }
 
@@ -83,47 +87,65 @@ class Encuestas extends CI_Controller {
 
         $data['title'] = "Preguntas";
 
-        $ultimo = "";
+        // id_cuestionario , pregunta , descripcion, tipo, id_encuesta
 
-        //Falta el view de la encuesta !!!! ya que para agregar una pregunta debo 
-        //saber y ver literalmente la encuesta 
+        $pregunta = array(
+            'pregunta' => $this->input->post('pregunta'),
+            'descripcion' => $this->input->post('descripcion'),
+            'tipo' => $this->input->post('tipo'),
+            'id_encuesta' => $this->session->encuesta
+        );
 
 
-        $this->load->view('templates/head.php');
+        $idPregunta = $this->pregunta_model->agregar_pregunta($pregunta);
+
+        //despachamos la vista 
+        $data['encuestas'] = $this->encuesta_model->get_encuesta($this->session->encuesta); //debolver los datos recien insertados
+
+        $data['preguntas'] = $this->pregunta_model->get_preguntas_por_encuesta($this->session->encuesta);
+        
+        $data['respuestas'] = $this->respuesta_model->get_respuesta_por_encuesta($this->session->encuesta);
+
+        $this->load->view('templates/head.php', $data);
         $this->load->view('templates/sidebar.php');
         $this->load->view('templates/navbar.php');
-        $this->load->view('cuestionario/preguntas.php', $data);
+        $this->load->view('cuestionario/viewEncabezado.php', $data);
+        $this->load->view('cuestionario/respuestas.php', $data);
+        $this->load->view('cuestionario/preguntas.php');
         $this->load->view('templates/footer.php');
+        
     }
 
     public function agregarRespuesta() {
         $data['title'] = "Respuesta";
 
+        //respuesta 
+        //id_respuesta , respuesta, id_cuestionario, id_encuesta 
+        //pregunta
+        //id_cuestionario , pregunta , descripcion, tipo, id_encuesta
 
-        //Falta el view de la encuesta y pregunta!!!! ya que para agregar una pregunta debo 
-        //saber y ver literalmente la encuesta y la pregunta 
+        $respuesta = array(
+            'respuesta' => $this->input->post('respuesta'),
+            'id_cuestionario' => $this->input->post('id_cuestionario'),
+            'id_encuesta' => $this->session->encuesta
+        );
 
-        $ultimo = "";
+        $this->respuesta_model->agregar_respuesta($respuesta);
 
-        $this->load->view('templates/head.php');
-        $this->load->view('templates/sidebar.php');
-        $this->load->view('templates/navbar.php');
+        //despachamos la vista 
+        $data['encuestas'] = $this->encuesta_model->get_encuesta($this->session->encuesta); //debolver los datos recien insertados
 
-        $this->load->view('templates/footer.php');
-    }
+        $data['preguntas'] = $this->pregunta_model->get_preguntas_por_encuesta($this->session->encuesta);
 
-    public function prueba() {
+        $data['respuestas'] = $this->respuesta_model->get_respuesta_por_encuesta($this->session->encuesta);
 
-        $data['title'] = "Encuestas";
-
-        $ultimo = "";
-
+        
         $this->load->view('templates/head.php', $data);
         $this->load->view('templates/sidebar.php');
         $this->load->view('templates/navbar.php');
-        $this->load->view('cuestionario/encabezado.php');
+        $this->load->view('cuestionario/viewEncabezado.php', $data);
+        $this->load->view('cuestionario/respuestas.php', $data);
         $this->load->view('cuestionario/preguntas.php');
-        $this->load->view('cuestionario/respuestas.php');
         $this->load->view('templates/footer.php');
     }
 

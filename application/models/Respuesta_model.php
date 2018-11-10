@@ -19,11 +19,22 @@ class Respuesta_model extends CI_Model {
         $this->load->database();
     }
     
-    public function get_respuesta_por_pregunta($idCuestionario = -1) {
+    public function get_respuesta_por_pregunta($idCuestionario) {
 
         $this->db->select(" id_respuesta , respuesta, id_cuestionario, id_encuesta  ", FALSE);
         $this->db->from("respuesta r");
         $this->db->where('id_cuestionario', $idCuestionario);
+
+        $query = $this->db->get();
+        
+        return $query->result_array();
+    }
+    
+    public function get_respuesta_por_encuesta($idIncuesta) {
+
+        $this->db->select(" id_respuesta , respuesta, id_cuestionario, id_encuesta  ", FALSE);
+        $this->db->from("respuesta r");
+        $this->db->where('id_encuesta', $idIncuesta);
 
         $query = $this->db->get();
         
